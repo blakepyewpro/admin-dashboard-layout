@@ -1,7 +1,26 @@
+@font-face {
+  font-family: "Roboto";
+  src: 
+    url("fonts/roboto-variablefont_wdthwght-webfont.woff") format("woff"),
+    url("fonts/roboto-variablefont_wdthwght-webfont.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+svg {
+  fill: currentColor;
+}
+
+ul {
+  list-style-type: none;
 }
 
 body {
@@ -15,19 +34,51 @@ body > * {
 }
 
 #sidebar {
-  background-color: lightblue;
+  background-color: #258BD0;
+  color: white;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
 
   grid-column: 1;
 }
 
-#sidebar::before {
-  background-color: white;
-  border: 1px solid black;
-  content: "Sidebar";
-  padding: 2px;
-  margin: 2px;
+.sidebar-item {
+  flex: none;
+  min-height: auto;
+}
 
-  position: absolute;
+#sidebar-header {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+  font-size: 1.7em;
+  font-weight: bold;
+  gap: 10%;
+}
+
+.sidebar-item > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
+}
+.sidebar-item > ul > li {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+  gap: 10%;
+  font-size: larger;
+  font-weight: bold;
+  min-height: fit-content;
+}
+
+.sidebar-item > ul {
+  display: grid;
+  gap: 2%
+}
+.sidebar-item > ul > li > svg {
+  height: 80%;
 }
 
 main {
@@ -40,6 +91,10 @@ main {
 
 main > header {
   background-color: lightyellow;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1.5fr 2fr;
 }
 
 main > header::before {
