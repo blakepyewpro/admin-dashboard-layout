@@ -78,7 +78,7 @@ body > * {
   gap: 2%
 }
 .sidebar-item > ul > li > svg {
-  height: 80%;
+  height: 70%;
 }
 
 main {
@@ -90,21 +90,97 @@ main {
 }
 
 main > header {
-  background-color: lightyellow;
+  background-color: white;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  position: relative;
 
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1.5fr 2fr;
+  grid-template-rows: 1fr 2fr;
+  padding: 2% 3%;
 }
 
-main > header::before {
-  background-color: white;
-  border: 1px solid black;
-  content: "Header";
-  padding: 2px;
-  margin: 2px;
+#search {
+  display: flex;
+  align-items: center;
+  gap: 2%
+}
 
-  position: absolute;
+#search > svg, #profile > svg {
+  height: 2em;
+}
+
+#search > input {
+  height: 2.5em;
+  width: 40vw;
+  padding: 2px 1.5em;
+
+  background-color: #E1E7EF;
+  border: none;
+  border-radius: 2em;
+  font-family: "Roboto", sans-serif;
+}
+
+#search > input:focus {
+  outline: 1px solid black;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+#profile {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  font-size: larger;
+  font-weight: bold;
+}
+
+.avatar {
+  height: 60px;
+}
+
+#big-avatar {
+  height: 90px;
+}
+
+#welcome {
+  display: flex;
+  gap: 3%;
+  align-items: center;
+}
+
+#welcome-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+#salutation {
+  font-weight: bold;
+}
+
+#username {
+  font-weight: bold;
+  font-size: 1.7em;
+}
+
+#buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10%;
+}
+
+#buttons > button {
+  border: none;
+  background-color: #258BD0;
+  color: white;
+  height: 2.5em;
+  width: 25%;
+  border-radius: 2.5em;
+  font-size: large;
+  font-weight: bold;
 }
 
 main > #display-area {
@@ -115,29 +191,9 @@ main > #display-area {
 }
 
 #projects {
-  background-color: lightcoral;
-}
-
-#projects::before {
-  background-color: white;
-  border: 1px solid black;
-  content: "Projects";
-  padding: 2px;
-  margin: 2px;
-
-  position: absolute;
+  background-color: E1E7EF;
 }
 
 #feed {
   background-color: lightgreen;
-}
-
-#feed::before {
-  background-color: white;
-  border: 1px solid black;
-  content: "Feed";
-  padding: 2px;
-  margin: 2px;
-
-  position: absolute;
 }
