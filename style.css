@@ -123,7 +123,7 @@ main > header {
 
 #search > input:focus {
   outline: 1px solid black;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 #profile {
@@ -190,8 +190,56 @@ main > #display-area {
   grid-template-columns: 3fr 1fr;
 }
 
+.display-header {
+  font-size: larger;
+  font-weight: bolder;
+}
+
 #projects {
-  background-color: E1E7EF;
+  background-color: #E1E7EF;
+  display: flex;
+  flex-direction: column;
+  padding: 3% 3%;
+  gap: 1.5%;
+}
+
+#projects-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 20vh;
+  gap: 3%;
+}
+
+.project {
+  background: linear-gradient(to right, #F0B429, #F0B429 8px, white 8px);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 5%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.proj-body {
+  color: #9E9E9E;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #9E9E9E white;
+}
+
+.proj-footer {
+  align-self: flex-end;
+  display: flex;
+  gap: 1em;
+  padding-top: 3%;
+}
+
+.proj-footer > img {
+  height: 1.5em;
+}
+
+.proj-footer > img:hover, li > svg:hover, li > span:hover {
+  cursor: pointer;
 }
 
 #feed {
