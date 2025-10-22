@@ -63,6 +63,7 @@ body > * {
   flex-direction: column;
   gap: 2%;
 }
+
 .sidebar-item > ul > li {
   display: grid;
   grid-template-columns: 1fr 4fr;
@@ -218,6 +219,10 @@ main > #display-area {
 
   display: flex;
   flex-direction: column;
+}
+
+.proj-header {
+  font-weight: bold;
 }
 
 .proj-body {
